@@ -42,3 +42,11 @@ hash = Hash(hash_length=256)
 hashed_value= hash.hash("aaaaa","@")
 print(hashed_value)
 ```
+
+## Contributing
+
+If you have an issue with my implementation please email me or raise an issue
+
+## Licence
+
+it is at licence.md
