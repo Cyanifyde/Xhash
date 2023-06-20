@@ -1,4 +1,4 @@
-# Xhash
+# CrossHash
 The homeplace of CrossHash
 
 This repository contains an implementation of a custom hash function. This document provides an overview of how the function works and how to use it.
