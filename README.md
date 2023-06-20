@@ -5,7 +5,6 @@ This repository contains an implementation of a custom hash function. This docum
 
 ## Table of Contents
 
-- [Hash Class](#Xhash)
 - [How It Works](#how-it-works)
 - [Usage](#usage)
 - [Contributing](#contributing)
