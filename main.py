@@ -2,7 +2,7 @@ import math
 
 class Hash:
     
-    def __init__(self,hash_length=256):
+    def __init__(self,hash_length : int =256):
         self.hash_length = hash_length
         self.coords = []
         self.output_coords = []
@@ -35,7 +35,7 @@ class Hash:
         self.output_coords.clear()
         return hash_value.encode('utf-8')
 
-    def trim(self, string):
+    def trim(self, string : str):
         remaining=string
         value=0
         while len(remaining)>0:
@@ -48,15 +48,15 @@ class Hash:
                 value+=int(half1)
         return value
         
-    def generate_lines(self, string, coords):
+    def generate_lines(self, string : str, coords : list):
         string = string.ljust(((len(string) + 3) // 4) * 4, 'a')
         for i in range(0, len(string), 4):
             coords.append(self.string_to_coordinates(string[i:i + 4]))
 
-    def string_to_coordinates(self, s):
+    def string_to_coordinates(self, s : string):
         return [(ord(s[0]), ord(s[1])), (ord(s[2]), ord(s[3]))]
 
-    def line_parameters(self, line):
+    def line_parameters(self, line : list):
         (x1, y1), (x2, y2) = line
         if x1 != x2:
             slope = (y2 - y1) / (x2 - x1)
@@ -66,7 +66,7 @@ class Hash:
             intercept = None
         return slope, intercept
 
-    def line_intersection(self, line1, line2):
+    def line_intersection(self, line1 : list, line2 : list):
         m1, c1 = self.line_parameters(line1)
         m2, c2 = self.line_parameters(line2)
         if m1 == m2:
@@ -82,7 +82,7 @@ class Hash:
             y = m1 * x + c1
         return [x, y]
 
-    def count_intersections(self, input_line, line_list):
+    def count_intersections(self, input_line : list, line_list : list):
         return sum(self.line_intersection(input_line, line) is not None for line in line_list)
 
     def intersection_angles(self, input_line, line_list):
