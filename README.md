@@ -29,8 +29,6 @@ The `Hash` class implemented here defines a hash function that takes a string an
 
 3. **Line Generation**: During the hash generation process, the string is divided into segments, each of which is converted to a pair of coordinates. These coordinates define lines that are used in the intersection calculation.
 
-   ![](https://us-east-1.tixte.net/uploads/cyan.needs.rest/Untitled_8_P1.png)
+4. **Intersection Counting and Angle Calculation**: For each line, the number of intersections with the other lines is counted. The angles at these intersections are also calculated. The sum of the intersections and angles is used to generate the hash value.
 
-5. **Intersection Counting and Angle Calculation**: For each line, the number of intersections with the other lines is counted. The angles at these intersections are also calculated. The sum of the intersections and angles is used to generate the hash value.
-
-6. **Trimming**: If the generated hash exceeds the specified length, it is trimmed to fit.
+5. **Trimming**: If the generated hash exceeds the specified length, it is trimmed to fit.
