@@ -9,6 +9,7 @@ This repository contains an implementation of a custom hash function. This docum
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
+- [Testing](#testing)
 
 ## How It Works
 
@@ -49,3 +50,7 @@ If you have an issue with my implementation please email me or raise an issue
 ## Licence
 
 it is at licence.md
+
+## Testing
+
+on replit with 2 vcores I can get ~ 140000 hashes per second (apparently)
