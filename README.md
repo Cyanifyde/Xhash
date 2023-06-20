@@ -32,3 +32,13 @@ The `Hash` class implemented here defines a hash function that takes a string an
 4. **Intersection Counting and Angle Calculation**: For each line, the number of intersections with the other lines is counted. The angles at these intersections are also calculated. The sum of the intersections and angles is used to generate the hash value.
 
 5. **Trimming**: If the generated hash exceeds the specified length, it is trimmed to fit.
+
+## Usage
+
+Initialise the class and asd an optional hash length, and then call the hash() function, addimg an input and an salt
+
+```python
+hash = Hash(hash_length=256)
+hashed_value= hash.hash("aaaaa","@")
+print(hashed_value)
+```
